@@ -137,7 +137,7 @@ func (r *rowSet) Next(ctx context.Context) bool {
 			return false
 		}
 
-		resp, err := r.client.Fetch(ctx, r.handle, false, 1000000)
+		resp, err := r.client.Fetch(ctx, r.handle, false, 1024)
 		if err != nil {
 			log.Printf("FetchResults failed: %v\n", err)
 			return false
